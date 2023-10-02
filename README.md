@@ -26,7 +26,7 @@ https://github.com/SDOSLabs/ALTENLoggerFirebase.git
 
 ``` swift
 dependencies: [
-    .package(url: "https://github.com/SDOSLabs/ALTENLoggerFirebase.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/SDOSLabs/ALTENLoggerFirebase.git", .upToNextMajor(from: "2.0.0"))
 ]
 ```
 
@@ -57,13 +57,14 @@ public let logger: Logger = {
     // Init Firebase before
     var logger = Logger(label: Bundle.main.bundleIdentifier ?? "AppLogger") {
         MultiplexLogHandler([
-            ALTENFirebaseLogHandler.standardOutput(label: $0, crashlytics: Crashlytics.crashlytics())
+            ALTENFirebaseLogHandler.standard(label: $0, crashlytics: Crashlytics.crashlytics())
         ])
     }
     logger.logLevel = .trace
     return logger
 }()
 ```
+
 - IMPORTANTE: Es obligatorio haber iniciado la [configuración de Firebase](https://firebase.google.com/docs/ios/setup?hl=es) antes de inciar el `Logger`.
 
 De esta forma tendremos disponible en todo el proyecto la variable `logger` que se usará para realizar los logs deseados.
@@ -83,8 +84,8 @@ public func loadData() async {
 ```
 Salida por consola
 ```
-🟦 Send to Crashlytics
-🟦 Send to Crashlytics
+🟦 [Crashlytics] Send ListFilmViewModel.swift ➝ loadData() ➝ L:88
+🟦 [Crashlytics] Send ListFilmViewModel.swift ➝ loadData() ➝ L:89
 ```
 ---
 ``` swift
@@ -96,8 +97,8 @@ public func search(searchTerm: String) async throws -> [FilmBO] {
 ```
 Salida por consola
 ```
-🟩 Send to Crashlytics
-🟩 Send to Crashlytics
+🟩 [Crashlytics] Send ListFilmViewModel.swift ➝ loadData() ➝ L:100
+🟩 [Crashlytics] Send ListFilmViewModel.swift ➝ loadData() ➝ L:101
 ```
 ---
 ``` swift
@@ -112,8 +113,8 @@ public func save(text: String) {
 ```
 Salida por consola
 ```
-🟦 Send to Crashlytics
-🟥 Send to Crashlytics
+🟦 [Crashlytics] Send ListFilmViewModel.swift ➝ loadData() ➝ L:132
+🟥 [Crashlytics] Send ListFilmViewModel.swift ➝ loadData() ➝ L:134
 ```
 ---
 
