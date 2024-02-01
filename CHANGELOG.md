@@ -1,3 +1,7 @@
+## [2.0.1](https://github.com/SDOSLabs/ALTENLoggerFirebase/tree/2.0.1)
+
+- Fix package name
+
 ## [2.0.0](https://github.com/SDOSLabs/ALTENLoggerFirebase/tree/2.0.0)
 
 - Change log format in console
