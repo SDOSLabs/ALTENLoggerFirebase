@@ -12,8 +12,8 @@ let package = Package(
             targets: ["ALTENLoggerFirebase"])
     ],
     dependencies: [
-        .package(url: "https://github.com/SDOSLabs/ALTENLoggerCore.git", .upToNextMajor(from: "1.1.0")),
-        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", .upToNextMajor(from: "10.15.0"))
+        .package(url: "https://github.com/SDOSLabs/ALTENLoggerCore.git", .upToNextMajor(from: "1.1.1")),
+        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", .upToNextMajor(from: "10.24.0"))
     ],
     targets: [
         .target(
@@ -21,6 +21,8 @@ let package = Package(
             dependencies: [
                 .product(name: "ALTENLoggerCore", package: "ALTENLoggerCore"),
                 .product(name: "FirebaseCrashlytics", package: "firebase-ios-sdk")
-            ])
+            ],
+            resources: [.process("PrivacyInfo.xcprivacy")]
+        )
     ]
 )
