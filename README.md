@@ -26,7 +26,7 @@ https://github.com/SDOSLabs/ALTENLoggerFirebase.git
 
 ``` swift
 dependencies: [
-    .package(url: "https://github.com/SDOSLabs/ALTENLoggerFirebase.git", .upToNextMajor(from: "2.0.0"))
+    .package(url: "https://github.com/SDOSLabs/ALTENLoggerFirebase.git", .upToNextMajor(from: "2.1.0"))
 ]
 ```
 

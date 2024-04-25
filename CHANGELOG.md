@@ -1,3 +1,6 @@
+## [2.1.0](https://github.com/SDOSLabs/ALTENLoggerFirebase/tree/2.1.0)
+- Incluido fichero `PrivacyInfo.xcprivacy` requerido por Apple: https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_use_of_required_reason_api
+
 ## [2.0.1](https://github.com/SDOSLabs/ALTENLoggerFirebase/tree/2.0.1)
 
 - Fix package name
