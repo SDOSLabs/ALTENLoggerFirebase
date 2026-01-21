@@ -1,3 +1,6 @@
+## [3.0.1](https://github.com/SDOSLabs/ALTENLoggerFirebase/tree/3.0.1)
+- Update Firebase dependency to 12.8.0
+
 ## [3.0.0](https://github.com/SDOSLabs/ALTENLoggerFirebase/tree/3.0.0)
 - Update Firebase dependency to 11.0.0
 
